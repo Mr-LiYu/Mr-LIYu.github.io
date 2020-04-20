@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .banner1 {
+        width: 100%;
+        height: 735px;
+        background: url(first/qwe.jpg);
+        background-size: 100% 620px;
+        background-repeat: no-repeat;
+    }
+
+    .art {
+        width: 32%;
+        height: 130px;
+        margin-top: 400px;
+        background-color: black;
+        opacity: 0.7;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 5%;
+    }
+
+    .art h3 {
+        padding: 20px;
+        margin-left: 5px;
+    }
+
+    .art p {
+        font-size: 20px;
+        margin-left: 90px;
+        margin-top: 15px;
+    }
+
+    #head {
+        float: left;
+        width: 100%;
+    }
+
+    .nali {
+        margin-top: 35px;
+        margin-left: 50px;
+        color: white;
+    }
+
+    #box {
+        display: block;
+        overflow: hidden;
+    }
+
+    #header {
+        height: 625px;
+    }
+
+    nav li {
+        float: right;
+        margin-left: 20px;
+        color: white;
+        font-size: 15px;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    nav {
+        display: inline-block;
+        margin-left: 810px;
+        position: absolute;
+        margin-top: -45px;
+        width: 550px;
+    }
+
+    nav ul {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    #specil {
+        margin-top: 50px;
+        margin-left: 450px;
+        font-style: italic;
+    }
+
+    hr {
+        width: 60%;
+        margin-left: 250px;
+    }
+
+    .Ergonomics {
+        font-size: 16px;
+        margin-left: 75px;
+        margin-top: -15px;
+        color: grey;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    #imgStyle {
+        width: 260px;
+        height: 170px;
+        margin-top: 30px;
+    }
+
+    #spanStyle {
+        color: #ffffff;
+        margin-left: 75px;
+    }
+
+    .three {
+        width: 1150px;
+        margin-right: 45px;
+    }
+
+    figcaption {
+        width: 150px;
+        height: 150px;
+        margin-top: 50px;
+        font-size: 15px;
+        border-radius: 50%;
+        border-top: 2px solid #69afde;
+        border-left: 2px solid #69afd9;
+        border-right: 2px solid #1ad280;
+        border-bottom: 2px solid #1ad280;
+    }
+
+    #not {
+        margin-top: 40px;
+        margin-left: 28px;
+    }
+
+    #design {
+        width: 100%;
+        font-size: 25px;
+        color: #ffffff;
+        margin-left: 550px;
+        padding: 10px 0;
+    }
+
+    #term {
+        width: 1200px;
+        margin-left: 60px;
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .fifImgOne {
+        width: 1200px;
+        height: 400px;
+        float: left;
+    }
+
+    .BigFifth {
+        width: 1200px;
+        height: 400px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    #fifth {
+        width: 4800px;
+    }
+
+    #preBtn {
+        height: 40px;
+        border: 1px solid white;
+        width: 50px;
+        text-align: center;
+        color: gray;
+        position: absolute;
+        font-size: 30px;
+        margin-left: 540px;
+        margin-top: 420px;
+    }
+
+    #nextBtn {
+        height: 40px;
+        border: 1px solid white;
+        width: 50px;
+        text-align: center;
+        color: gray;
+        position: absolute;
+        font-size: 30px;
+        margin-left: 610px;
+        margin-top: 420px;
+    }
+
+    #imgStyle {
+        width: 260px;
+        height: 170px;
+        margin-top: 30px;
+    }
+
+    .more {
+        width: 220px;
+        height: 50px;
+        border: 2px solid black;
+        cursor: pointer;
+        margin-left: 450px;
+        margin-top: 25px;
+    }
+
+    .more p {
+        margin-left: 45px;
+        font-size: 18px;
+        padding-top: 12px;
+    }
+
+    #yy {
+        margin-top: 50px;
+        color: white;
+    }
+
+    #xm {
+        width: 250px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #dh {
+        width: 250px;
+        height: 40px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    #button1 {
+        width: 250px;
+        height: 40px;
+        font-size: 18px;
+        margin-top: 20px;
+        background-color: #3d3331;
+        color: white;
+    }
+
+    #yuyue {
+        display: inline-block;
+    }
+
+    #us {
+        display: block;
+        float: right;
+    }
+
+    #uc {
+        margin-top: 20px;
+    }
+
+    #uc li {
+        color: gray;
+    }
+
+    .d_3 {
+        float: right;
+        margin-top: -180px;
+        margin-right: 70px;
+    }
+
+    .d_3 ul {
+        width: 280px;
+    }
+
+    #end {
+        margin-top: 100px;
+        color: gray;
+        font-size: 14px;
+    }
+
+    article a {
+        text-decoration: none !important;
+        color: black;
+    }
+
+    #head a {
+        text-decoration: none !important;
+    }
+
+    .opt {
+        display: none;
+        margin-left: 15px;
+        font-size: large;
+        font-family: cursive;
+        color: #81a178;
+    }
+
+    .slide {
+        width: 54px;
+        height: 275px;
+        position: fixed;
+        margin-top: 200px;
+    }
+
+    #slideOne {
+        width: 150px;
+        height: 220px;
+        margin-top: -700px;
+    }
+
+
+    .slideTwo a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+
+<body>
+    <!-- 标签 -->
+    <header id="head" style="width: 100%;">
+        <div id="box">
+            <div class="nali">
+                <h2>那里国际家居</h2>
+            </div>
+            <nav>
+                <ul class="firstUl">
+                    <li><a href="">关于我们</a></li>
+                    <li><a href="">新闻资讯</a></li>
+                    <li><a href="">精品案例</a></li>
+                    <li><a href="">那里系列</a></li>
+                    <li><a href="">招商加盟</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">首页</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 内饰 -->
+    <div id="header">
+        <!-- 背景图 -->
+        <ul id="imgList">
+            <li>
+                <div class="banner1">
+                    <div class="container">
+                        <article class="art">
+                            <h3>精品时尚现代风设计</h3>
+                            <p>什么叫做“舒适与轻奢” </p>
+                        </article>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- No.1 我们的特色 -->
+    <section>
+        <div class="container">
+            <h2 id="specil">No.1&emsp;我们的特色</h2>
+            <hr>
+            <div class="row">
+                <article class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h3 class="wj"><img src="first/one.png" alt=""
+                            style="margin-top: 30px; height: 40px;padding-right: 15px;"> 人体工程学
+                        <p class="Ergonomics">Ergonomics</p>
+                    </h3>
+                    <p style="font-size: 16px;color: grey;margin-top: 20px;">符合人体工程学完美契合身体</p>
+                </article>
+                <article class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h3 class="wj"><img src="first/two.png" alt=""
+                            style="margin-top: 30px; height: 40px;padding-right: 15px;"> 原创设计
+                        <p class="Ergonomics">original design</p>
+                    </h3>
+                    <p style="font-size: 16px;color: grey;margin-top: 20px;">以国际审美标准创造精致生活</p>
+                </article>
+                <article class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h3 class="wj"><img src="first/three.png" alt=""
+                            style="margin-top: 30px; height: 40px;padding-right: 15px;"> 原创设计
+                        <p class="Ergonomics">Perfect craft</p>
+                    </h3>
+                    <p style="font-size: 16px;color: grey;margin-top: 20px;">每一处缝都完美无暇细节到位</p>
+                </article>
+                <article class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h3 class="wj"><img src="first/four.png" alt=""
+                            style="margin-top: 30px; height: 40px;padding-right: 15px;"> 优质服务
+                        <p class="Ergonomics">Quality service</p>
+                    </h3>
+                    <p style="font-size: 16px;color: grey;margin-top: 20px;">强大的售后服务团队后顾无忧</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- No.2 那你产品系列 -->
+    <section style="background-color:#3d3331;padding-bottom: 50px;margin-bottom: 20px;">
+        <div class="container">
+            <h2 id="specil" style="color: #ffffff;">No.2 那里产品系列</h2>
+            <hr>
+            <div class="row">
+                <div class="shadows">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/03-12/77ec521e77eb75165151412c35586a17.jpg"
+                            alt="" id="imgStyle">
+                        <h4 id="spanStyle">那里家具&emsp;系列</h4>
+                    </figure>
+                </div>
+
+                <div class="shadows">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/03-12/d5c7b68ba0cc5f987032062601cfb860.jpg"
+                            alt="" id="imgStyle">
+                        <h4 id="spanStyle">那里国际&emsp;系列</h4>
+                    </figure>
+                </div>
+                <div class="shadows">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/03-12/77ec521e77eb75165151412c35586a17.jpg"
+                            alt="" id="imgStyle">
+                        <h4 id="spanStyle">Siloni&emsp;系列</h4>
+                    </figure>
+                </div>
+                <div class="shadows">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/03-12/77ec521e77eb75165151412c35586a17.jpg"
+                            alt="" id="imgStyle">
+                        <h4 id="spanStyle">北京•院子&emsp;系列</h4>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- No.3 那里的初衷 -->
+    <section id="oth">
+        <div class="container">
+            <h2 id="specil">No.3 那里的初衷</h2>
+            <hr>
+            <div class="row">
+                <div class="three">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        <figcaption>
+                            <div id="not">
+                                <p>迎合当下需求</p>
+                                <p style="margin-left: 10px;">市场调查</p>
+                                <p class="opt">Option1</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        <figcaption>
+                            <div id="not">
+                                <p style="margin-left: 10px;">文化梳理</p>
+                                <p style="margin-left: 5px;">与风格定位</p>
+                                <p class="opt">Option1</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        <figcaption>
+                            <div id="not">
+                                <p style="margin-left: 20px;">人体学</p>
+                                <p style="margin-left: 25px;">设计</p>
+                                <p class="opt">Option1</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        <figcaption>
+                            <div id="not">
+                                <p style="margin-left: 10px;">实木品质</p>
+                                <p style="margin-left: 10px;">健康理念</p>
+                                <p class="opt">Option1</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        <figcaption>
+                            <div id="not">
+                                <p style="margin-left: 30px;">原创</p>
+                                <p style="margin-left: 30px;">设计</p>
+                                <p class="opt">Option1</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                        <figcaption>
+                            <div id="not">
+                                <p style="margin-left: 10px;">家的氛围</p>
+                                <p>安静不失热情</p>
+                                <p class="opt">Option1</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- No.4 那里家居特色服务  1024 300 -->
+    <section style="background-color: black;height:600px ;">
+        <div class="container">
+            <h2 id="specil" style="color: #ffffff;">No.4 那里家居特色服务</h2>
+            <hr>
+            <div class="BigFifth">
+                <div id="fifth">
+                    <div class="fifImgOne">
+                        <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/ys-11.png" alt=""
+                            style="margin-left: 70px;">
+                        <p id="design">软装设计</p>
+                        <p id="term">专业的团队、敏锐的市场洞察力、独到的设计潮流把握、国际化的视觉导向等都是成功策划出一个主题的因素，是提供一流服务的保障，更是为顾客带来成功的垫脚石。</p>
+                    </div>
+                    <div class="fifImgOne">
+
+                        <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/ys-22.png" alt=""
+                            style="margin-left: 70px;">
+                        <p id="design">创意设计</p>
+                        <p id="term">结合实际，敢于突破，寻求质的飞跃，打造独具一帜的城市名片，用创意引领时尚，刷新体验，俘获眼球。</p>
+
+                    </div>
+                    <div class="fifImgOne">
+
+                        <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/ys-3.png" alt=""
+                            style="margin-left: 70px;">
+                        <p id="design">送货施工</p>
+                        <p id="term">好的服务体现于真正的上门服务，严谨的施工队伍是百年大业的保障。从一块砖到一根柱，都精挑细选，用良心做工程，让每个环节都最大程度得到保证。</p>
+
+                    </div>
+
+                    <div class="fifImgOne">
+                        <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/ys-11.png" alt=""
+                            style="margin-left: 70px;">
+                        <p id="design">软装设计</p>
+                        <p id="term">专业的团队、敏锐的市场洞察力、独到的设计潮流把握、国际化的视觉导向等都是成功策划出一个主题的因素，是提供一流服务的保障，更是为顾客带来成功的垫脚石。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="preBtn">
+                < </div>
+                    <div id="nextBtn">></div>
+            </div>
+    </section>
+    <!-- No.5 客户案例 -->
+    <section>
+        <div class="container">
+            <h2 id="specil">No.5 客户案例</h2>
+            <hr>
+            <div class="row">
+                <div class="shad">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-10/a1b24dbe37b6a3a40301821c8bec25c8.jpg"
+                            alt="" id="imgStyle">
+                        <h4>纪梵希—北京某客户家装环境</h4>
+                    </figure>
+                </div>
+                <div class="shad">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-10/4043dc618942f6d3ec8bbadc3e16741e.jpg"
+                            alt="" id="imgStyle">
+                        <h4>宝格丽—北京某客户家装环境</h4>
+                    </figure>
+                </div>
+                <div class="shad">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-10/476d54bdbf35e9d3799b8e2dbc6041b3.jpg"
+                            alt="" id="imgStyle">
+                        <h4>香奈儿—北京某客户家装环境</h4>
+                    </figure>
+                </div>
+                <div class="shad">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-10/15b303653352ee20552cb812aeb36b62.jpg"
+                            alt="" id="imgStyle">
+                        <h4>北欧风情—北京某客户家装环境</h4>
+                    </figure>
+                </div>
+                <div class="shad">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-10/d00ffaa318cc3d0aacbcdbab4153c431.jpg"
+                            alt="" id="imgStyle">
+                        <h4>托斯卡纳—北京某客户家装环境</h4>
+                    </figure>
+                </div>
+                <div class="shad">
+                    <figure class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-10/d00ffaa318cc3d0aacbcdbab4153c431.jpg"
+                            alt="" id="imgStyle">
+                        <h4>印象米兰—北京某客户家装环境</h4>
+                    </figure>
+                </div>
+            </div>
+            <div class="more">
+                <p>查看更多MORE→</p>
+            </div>
+        </div>
+    </section>
+    <!-- No.6 关于我们 -->
+    <section style="background-color: #302b28;padding-bottom: 40px;">
+        <div class="container">
+            <h2 id="specil" style="color: white;">No.6 关于我们</h2>
+            <hr>
+            <p style="color: gray;text-indent: 30px;font-size: 16px;">
+                “知之者，不如好之者，好之者，不如乐之者”正是秉承着这样的一个对家居业理解的理念，公司秉承”品牌经营,服务至上”的经营理,密切跟踪中国主流社会的家居文化观念和市场需求的演变，为白领阶层和成功人士倾心营造唯美、尊贵、和谐、个性化、洋溢着自然主义和现代气息的家居产品...
+            </p>
+
+        </div>
+    </section>
+    <!-- No.7 行业资讯 -->
+    <section>
+        <div class="container">
+            <h2 id="specil"> No.7 行业资讯</h2>
+            <hr>
+            <div class="row" style="margin-top: 50px;">
+                <figure class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="width: 570px;">
+                    <article style="width: 570px;">
+                        <a href="news.html">
+                            <img src="first/first.png" alt="">
+                        </a>
+                        <h4 style="margin-left: 225px;margin-top: -125px;"> <a
+                                href="news.html">热烈庆贺：那里家居荣获“2016-2017十大现代时尚家具品牌”</a><img
+                                src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/new.gif" alt=""></h4>
+                        <p style="margin-left: 225px;font-size: 16px;line-height: 30px;">
+                            那里家居是一个生于北京，长于北京的本土家居品牌，中国知名家居品牌，国内新兴领域“两厅整体家居”的领导者。 ...</p>
+                        <div style="margin-top:-50px"><img src="first/1.png" alt=""><a href=""
+                                style="display: inline-block;margin-top: 50px;margin-left: 10px;">行业资讯</a><img
+                                src="first/2.png" alt="" style="margin-left: 10px;"><img src="first/3.png"
+                                style="margin-left: 10px;" alt=""><span
+                                style="color: red;margin-left: 10px;">2017-07-14</span></div>
+                    </article>
+                </figure>
+                <figure class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="width: 570px;margin-left: 30px;">
+                    <article style="width: 570px;">
+                        <a href="news.html">
+                            <img src="first/first.png" alt="">
+                        </a>
+                        <h4 style="margin-left: 225px;margin-top: -125px;"> <a
+                                href="news.html">北京那里·国际家居深圳展完美收官：展会有期精彩无限！</a><img
+                                src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/new.gif" alt=""></h4>
+                        <p style="margin-left: 225px;font-size: 16px;line-height: 30px;">
+                            为期四天的第33届深圳国际家具展圆满落幕。那里·国际家居在此次展会。无论是客流还是人气，还是签约率上都收获颇丰，从展会第一天开 ...</p>
+                        <div style="margin-top:-50px"><img src="first/1.png" alt=""><a href=""
+                                style="display: inline-block;margin-top: 50px;margin-left: 10px;">行业资讯</a><img
+                                src="first/2.png" alt="" style="margin-left: 10px;"><img src="first/3.png"
+                                style="margin-left: 10px;" alt=""><span
+                                style="color: red;margin-left: 10px;">2018-0-14</span></div>
+                    </article>
+                </figure>
+
+                <figure class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="width: 570px;margin-top: 30px;">
+                    <article style="width: 570px;">
+                        <a href="news.html">
+                            <img src="first/first.png" alt="">
+                        </a>
+                        <h4 style="margin-left: 225px;margin-top: -125px;"> <a href="news.html">新国展，新时尚，那里·国际家居带您领略新面貌</a><img
+                                src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/new.gif" alt=""></h4>
+                        <p style="margin-left: 225px;font-size: 15px;line-height: 30px;">
+                            2018年6月14日-17日，BIFF`2018北京国际家居展暨智能生活节，那里·国际家居展会我们等您！ ...</p>
+                        <div style="margin-top:-50px;margin-left: 220px;"><img src="first/1.png" alt=""><a href=""
+                                style="display: inline-block;margin-top: 50px;margin-left: 10px;">行业资讯</a><img
+                                src="first/2.png" alt="" style="margin-left: 10px;"><img src="first/3.png"
+                                style="margin-left: 10px;" alt=""><span
+                                style="color: red;margin-left: 10px;">2018-6-26</span></div>
+                    </article>
+                </figure>
+                <figure class="col-xs-12 col-sm-6 col-md-6 col-lg-6"
+                    style="width: 570px;margin-top: 30px;margin-left: 30px;">
+                    <article style="width: 570px;">
+                        <a href="news.html">
+                            <img src="first/first.png" alt="">
+                        </a>
+                        <h4 style="margin-left: 225px;margin-top: -125px;"> <a href="news.html">那里家居惊艳魔都引领轻奢时尚国际范 </a><img
+                                src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/new.gif" alt=""></h4>
+                        <p style="margin-left: 225px;font-size: 15px;line-height: 30px;">
+                            那里家具在此次展会上将主要围绕全国重点城市招商，并在原有招商政策基础上，提供更多惊喜优惠，希望能有更多志同道合、有经营理念、有 ...</p>
+                        <div style="margin-top:-50px;margin-left: 220px;"><img src="first/1.png" alt=""><a href=""
+                                style="display: inline-block;margin-top: 50px;margin-left: 10px;">行业资讯</a><img
+                                src="first/2.png" alt="" style="margin-left: 10px;"><img src="first/3.png"
+                                style="margin-left: 10px;" alt=""><span
+                                style="color: red;margin-left: 10px;">2019-11-21</span></div>
+                    </article>
+                </figure> -->
+            </div>
+            <hr>
+            <div class="more">
+                <p>查看更多MORE→</p>
+            </div>
+        </div>
+    </section>
+    <!-- 尾部 -->
+    <div class="footer" style="background-color: #232323;padding: 50px;">
+        <footer class="container">
+            <div class="dibu" style="width: 650px;">
+                <div id="yuyue">
+                    <h4 id="yy">代理极速预约 Reservation</h4>
+                    <form action="">
+                        <ul>
+                            <li>
+                                <input name="title" id="xm" class="xm" placeholder="您的尊称 Name" maxlength="10">
+                            </li>
+                            <li>
+                                <input name="mycall" id="dh" class="dh" placeholder="您的电话 Phone" maxlength="11">
+                            </li>
+                            <li>
+                                <input name="submit" type="submit" id="button1" value="立即提交 Submit →">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div id="us">
+                    <h4 id="yy">联系我们 Contact US</h4>
+                    <div class="address">
+                        <ul id="uc">
+                            <li>北京市大兴区旧宫镇小红门路136号兴南大厦</li>
+                            <li><strong>400-890-5688</strong></li>
+                            <li>24 Hours 服务</li>
+                            <li><a href="cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="">8bych8@sina.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="d_3">
+                <ul>
+                    <li><img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/weixin.jpg"
+                            style="width: 130px;height: 130px;" alt="那里国际家居" title="那里国际家居">
+                        <p>官方微博</p>
+                    </li>
+                    <li style="margin-left: 160px;margin-top: -160px"><img
+                            src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/weibo.jpg"
+                            style="width: 130px;height: 130px;" alt="那里国际家居" title="那里国际家居">
+                        <p>官方微信</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="end">
+                Copyright © 2007-2019 那里家居 京ICP备19009601号&emsp;鲁班园家具生产&emsp;家具生产
+            </div>
+        </footer>
+    </div>
+    <!-- 侧边导航 -->
+    <div id="slideOne">
+        <div class="slideBig" style="position: fixed;width: 55px;bottom: 400px;right: 0;">
+            <div class="slideTwo" style="width: 150px;bottom: 400px;right: 0;background-color: black;">
+                <a href=""><img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon01.png"
+                        alt="">产品系列</a>
+            </div>
+        </div>
+        <div class="slideBig" style="position: fixed;width: 55px;bottom: 350px;right: 0;">
+            <div class="slideTwo" style="width: 150px;bottom: 350px;right: 0;background-color: black;">
+                <a href=""><img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon02.png"
+                        alt="">客户案例</a>
+            </div>
+        </div>
+        <div class="slideBig" style="position: fixed;width: 55px;bottom: 300px;right: 0;">
+            <div class="slideTwo" style="width: 150px;bottom: 300px;right: 0;background-color: black;">
+                <a href=""><img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon04.png"
+                        alt="">QQ克服</a>
+            </div>
+        </div>
+        <div class="slideBig" style="position: fixed;width: 55px;bottom: 250px;right: 0;">
+            <div class="slideTwo" style="width: 150px;bottom: 250px;right: 0;background-color: black;">
+                <a href="javascript:void(0);"><img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon05.png"
+                        alt=""></a>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="bs/js/jquery.min.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
