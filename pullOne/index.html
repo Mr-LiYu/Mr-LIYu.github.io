@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        li {
+            list-style: none
+        }
+
+        #singerList {
+            width: 1000px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        #singerList li {
+            float: left;
+            width: 100px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        #singerList img {
+            width: 80px;
+            height: 80px;
+        }
+
+        h4 {
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="send">获取数据</button>
+    <ul id="singerList">
+
+    </ul>
+</body>
+<script>
+    var index = 0;
+    send.onclick = function () {
+        function qwe(index) {
+            // 1.创建请求对象
+            var xhr = new XMLHttpRequest();
+            // 2.指定请求路径、请求方式
+            // 请求路径  ?之后是携带的参数  x=10&y=20
+            xhr.open("GET", "http://vebcoder.cn:9090/artist/artistInfo?category=0&pn=" + index + "&rn=100")
+            // 3.发送请求
+            xhr.send();
+            // 4.监听请求成功的回调函数
+            xhr.onreadystatechange = function () {
+                if (xhr.status == 200 && xhr.readyState == 4) {
+                    // 拿到请求结果
+                    var res = JSON.parse(xhr.responseText);
+                    var list = res.data.artistList;
+                    // 展示到页面
+                    for (var i = 0; i < list.length; i++) {
+                        var li = document.createElement("li");
+                        var h4 = document.createElement("h4");
+                        var img = document.createElement("img");
+                        img.src = list[i].pic;
+                        h4.innerHTML = list[i].name;
+                        li.appendChild(img);
+                        li.appendChild(h4);
+                        singerList.appendChild(li);
+                    }
+                    singerList.appendChild(li);
+
+                }
+            }
+        }
+        qwe(index);
+        window.onscroll = function () {
+            var scrTop = document.body.scrollTop || document.documentElement.scrollTop;
+            console.log(scrTop);
+            var scrHeight = document.body.scrollHeight || document.documentElement.scrollHeight;
+            console.log(scrHeight);
+            var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            console.log(clientHeight);
+            if (scrTop + clientHeight == scrHeight) {
+                console.log("进来了");
+                index++;
+                qwe(index);
+            }
+        };
+    }
+
+</script>
+
+</html>
