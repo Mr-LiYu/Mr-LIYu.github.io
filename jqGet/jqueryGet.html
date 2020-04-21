@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    #singerList {
+        width: 1000px;
+        overflow: hidden;
+    }
+
+    #singerList li {
+        float: left;
+        width: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    #singerList img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h4 {
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+
+<body>
+    <button id="btn">接收数据</button>
+    <ul id="singerList">
+
+    </ul>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $("#btn").click(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://vebcoder.cn:9090/artist/artistInfo?category=0&pn=1&rn=100",
+            dataType: "json",
+            success: function (msg) {
+                $("#singerList").html(msg);
+               var list=msg.data.artistList;
+               console.log(list);
+               for(var i=0;i<list.length;i++){
+                    var li = document.createElement("li");
+                    var img = document.createElement("img");
+                    img.src=list[i].pic;
+                    var h4 = document.createElement("h4");
+                    h4.innerHTML=list[i].name;
+                    li.appendChild(img);
+                    li.appendChild(h4);
+                    singerList.appendChild(li);
+                }
+    },
+        error: function (xhr) {
+            alert(xhr.status);
+        }
+        });
+    })
+
+</script>
+
+
+</html>
