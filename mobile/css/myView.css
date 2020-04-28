@@ -403,13 +403,13 @@ color:grey;
 display: block;
 width: 0.28rem;
 height: 0.13rem;
-margin-top: -0.21rem;  
+margin-top: -0.18rem;  
 margin-left: 3.2rem;  
 }
 .thirdFloor_five_two_one :nth-child(4){
 font-size:0.25rem ;
 margin-left: 3.5rem;
-margin-top: -0.25rem;
+margin-top: -0.23rem;
 color:grey;  
 opacity: 0.7; 
 } 
@@ -423,13 +423,13 @@ margin-top: 0.1rem;
 display: block;
 width: 0.28rem;
 height: 0.13rem;
-margin-top: 0.15rem; 
+margin-top: 0.2rem; 
 /* margin-left: 0.1rem;    */
 }
 .fourFloor_five_two :nth-child(2){
 font-size:0.25rem ;
 margin-left: 0.4rem;
-margin-top: -0.25rem;
+margin-top: -0.22rem;
 color:grey;  
 }
 .fiveFloor{
@@ -437,7 +437,7 @@ width: 7.5rem;
 height: 4.53rem;
 }
 .sixFloor{
-height: 4rem;
+height: 4.1rem;
 width: 7.5rem;
 }
 .centerFloorBig{
@@ -475,6 +475,11 @@ width: 7.5rem;
 height: 1rem;
 display: flex;
 justify-content: space-around;
+position: fixed;
+background-color: white;
+bottom: 0.01rem;
+padding-top: 0.1rem;
+
 }
 .endOneArt{
 width: 0.65rem;
