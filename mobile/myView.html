@@ -2,518 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
+    <script src="js/iscroll.Veb.js"></script>
+    <link rel="stylesheet" href="css/myView.css">
 </head>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    html{
-        font-size: 13.334vw;
-    }
-    .nav{
-        height: 0.8rem;
-        width: 7.5rem;
-        display: flex;
-    }
-    .navLeft{
-        width: 1.3rem;
-        height: 0.8rem;
-        /* border: 1px solid black; */
-    }
-    .navLeft p{
-        font-size: 0.3rem;
-        color: #ff5c5c;
-        text-align: center;
-        line-height: 0.8rem;
-    }
-    .navLeft img{
-        width: 0.2rem;
-        height: 0.2rem;
-    }
-    .navCenter{
-        width: 4.9rem;
-        height: 0.8rem;
-        /* border: 1px solid black; */
-    }
-    .navCenter_one{
-        width: 4.4rem;
-        height: 0.4rem;
-        margin-top: 0.2rem;
-        margin-left: 0.2rem;
-        display: flex;
-    }
-    .navCone{
-        width: 0.2rem;
-        height: 0.4rem;
-        border-radius: 1rem 0 0 1rem  ;
-        margin-left: 0.1rem;
-        background-color: #f3f3f3;
-    }
-    .navCThree{
-        width: 0.2rem;
-        height: 0.4rem;
-        border-radius:0 1rem 1rem 0;
-        background-color: #f3f3f3;
-    }
-  .navCTwo{
-      width: 4.6rem;
-      height: 0.4rem;
-      background-color: #f3f3f3;
-  }
-  .navCTwo img{
-      width: 0.3rem;
-      height: 0.3rem;
-      display: block;
-      margin-top: 5px;
-  }
-  .navCTwo p{
-      font-size: 0.2rem;
-      height: 0.3rem;
-      margin-left: 0.4rem;
-      margin-top: -0.3rem;
-      color: gray;
-      opacity: 0.8;
-  }
-  .navRight{
-      width: 1.1rem;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-  }
-  .navRight img{
-      width: 0.35rem;
-      height: 0.35rem;
-          
-  }
- .center{
-     width: 7.5rem;
-     height: 3.4rem;
- }
- .center img{
-     width: 7.5rem;
-     height: 3.4rem;
- }
- .common{
-     width: 7.5rem;
-     height: 1.4rem;
-     display: flex;
-    justify-content: space-around;
- }
- article{
-     width:1.1rem ;
-     height: 1.5rem;
- }
- article p{
-     font-size: 0.25rem;
-     margin-top: -0.2rem;
-     text-align: center;
- }
- article img{
-     width: 1.1rem;
-     height: 1rem;
- }
- .centerFloor{
-     width: 7.5rem;
-     height: 0.1rem;
-     background-color: #f3f3f3;
-     margin-top: 0.1rem;
- }
- .firstFloor{
-     width: 7.5rem;
-     height: 2.9rem;
-     display: flex;
- }
- .firstFloor_one{
-     width: 3.75rem;
-     height: 2.9rem;
-     border-right: 1px solid #f3f3f3;
- }
- .firstFloor_one_one{
-   padding: 0.2rem 0 0 0.2rem;  
- }
- .firstFloor_one_one h4{
-     font-size: 0.3rem;
-     color: #f17937;
-     font-weight: 500;
-     padding-bottom: 0.1rem;
- }
- .firstFloor_one_one p{
-     font-size: 0.23rem;
-     font-weight: 300;
-     color: gray;
-     padding-bottom: 0.1rem;
- }
- .firstFloor_one_two img{
-     width: 3.5rem;
-     height: 1.4rem;
-     padding-left: 0.05rem;
- }
- .firstFloor_two{
-     width: 3.7rem;
-     height: 2.9rem;
-     padding-left: 0.1rem;
- }
- .firstFloor_two_one{
-         width: 3.7rem;
-         height: 1.45rem;
-         display: flex;
- }
- .firstFloor_two_one_one img{
-       width: 1.2rem;
-       height: 0.75rem;
- }
- .firstFloor_two_one_two img{
-    width: 1.5rem;
-       height: 1.15rem;
-       margin-top: 0.2rem;
-       padding-right: 0.2rem;
- }
- .firstFloor_one_one_three h4{
-     margin-top: 0.3rem;
-        color: #3da7da;
-        font-size: 0.3rem;
-     font-weight: 500;
-     padding-bottom: 0.1rem;
-     
- }
- .firstFloor_one_one_three p{
-     font-size: 0.23rem;
-     font-weight: 300;
-     color: gray;
-     padding-bottom: 0.1rem;
- }
- .secondFloor{
-     padding: 0.05rem 0.1rem;
- }
-
- .secondFloor img{
-       width: 7.3rem;
-       height: 2.2rem;
- }
- .thirdFloor{
-     height: 4.5rem;
-     width: 7.5rem;
- }
- .thirdFloor_one{
-      height: 0.9rem;
-      width: 7.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
- }
- .thirdFloor_one_one{
-     width: 5.7rem;
-     height: 0.9rem;
-     display: flex;
-     align-items: center;
-     margin-left: 0.06rem;
- }
- .thirdFloor_one_one img{
-     width: 0.68rem;
-     height: 0.62rem;
-     display: block;
-     margin-top: 0.15rem;
- }
- .thirdFloor_one_one p{
-         font-size: 0.29rem;
-         padding: 0  0.1rem;
-         margin-top: 0.05rem;
- }
-.thirdFloor_one_one div{
-    width: 1.15rem;
-    height: 0.3rem;
-    background-color: #ff5c5c;
-    font-size:0.2rem ;
-    color: white;
-    text-align: center;
-    padding-top: 0.03rem;
-    border-radius: 0.18rem;
-    margin-top: 0.1rem;
-    margin-left: 0.1rem;
-}
-.thirdFloor_one_two{
-    width: 1rem;
-    height: 0.32rem;
-    border: 1px solid #ff5c5c;
-    border-radius: 0.12rem;
-    font-size: 0.22rem;
-    color: #ff5c5c;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    margin-right: 0.1rem;
-
-}
-.thirdFloor_one_p1 {
-    width: 0.3rem;
-    height: 0.32rem;
-    font-size: 0.4rem;
-    color: #ff5c5c;
-    display: inline-block;
-    margin-top: -0.28rem;
-    padding-left: 0.05rem;
-}
-.thirdFloor_one_p2 {
-    width: 0.5rem;
-    height: 0.32rem;
-    font-size: 0.23rem;
-    color: #ff5c5c;
-    display: inline-block;
-}
-.thirdFloor_two{
-    font-size: 0.25rem;
-    margin-left: 0.1rem;
-    color: gray;
-}
-.thirdFloor_three{
-    margin-top: 0.2rem;
-    height: 1.8;
-    padding: 0 0.1rem;
-}
-.thirdFloor_three img{
-    height: 1.80rem;
-    width: 7.3rem;
-}
-.thirdFloor_four{
-    width: 3.3rem;
-    height: 0.4rem;
-    border: #ff5c5c 6px solid;
-    margin-left: 4rem;
-    margin-top: -0.15rem;
-    display: flex;
-    border-radius: 6px;
-}
-.thirdFloor_four_one{
-    display: flex;
-    width: 2.1rem;
-    height: 0.31rem;
-    justify-content: center;
-}
-.thirdFloor_four_one :nth-child(2){
-    color: #ff5c5c;
-    font-size: 0.33rem;
-}
-.thirdFloor_four_one :nth-child(3){
-    color: gray;
-    font-size: 0.29rem;
-    text-decoration: line-through;
-    margin-top: 0.02rem;
-    display: block;
-    margin-left: 0.1rem;
-}
-.thirdFloor_four_one :nth-child(1){
-    width: 0.3rem;
-    height: 0.32rem;
-    margin-top: 0.05rem;
-}
-.thirdFloor_four_two{
-    width:1.2rem;
-    height: 0.4rem;
-    background-color: #ff5c5c;
-}
-.thirdFloor_four_two p{
-        font-size: 0.29rem;
-        color: aliceblue;
-        text-align: center;
-}
-hr{
-    margin-top: 0.1rem;
-    display: block;
-    border: none;
-    height: 1px;
-    background-color: #3f3f3f;
-    opacity: 0.3;
-}
-.thirdFloor_five{
-    display: flex;
-    width: 7.5rem;
-    height: 0.55rem;
-}
-.thirdFloor_five_one{
-    width: 5rem;
-    height: 0.45rem;
-    margin-top: 0.1rem;
-}
-.thirdFloor_five_one :nth-child(1){
-    width: 0.2rem;
-    height: 0.23rem;
-    display: block;
-    margin-top: 0.15rem;
-    margin-left: 0.1rem;
-}
-.thirdFloor_five_one :nth-child(2){
-    font-size:0.29rem ;
-    margin-left: 0.4rem;
-    margin-top: -0.35rem;
-    color: #ff5c5c;
-    opacity: 0.8;
-    
-}
-.thirdFloor_five_two{
-    width: 0.9rem;
-    height: 0.45rem;
-    margin-left: 3.2rem;
-    margin-top: 0.1rem;
-}
-.thirdFloor_five_two :nth-child(1){
-    display: block;
-    width: 0.28rem;
-    height: 0.13rem;
-    margin-top: 0.15rem;    
-}
-.thirdFloor_five_two :nth-child(2){
-    font-size:0.25rem ;
-    margin-left: 0.3rem;
-    margin-top: -0.25rem;
-    color:gray;  
-    opacity: 0.7; 
-}
-.fourFloor{
-    width: 7.5rem;
-    height: 5.75rem;
-
-}
-.fourFloor_one{
-    display: flex;
-    width: 7.5rem;
-    height: 1.95rem;
-    justify-content: space-around;
-    margin-top: 0.1rem;
-}
-.fourFloor_one_one img{
-       width: 3.6rem;
-       height:1.86rem;
-}
- .thirdFloor_five_two_one{
-    width: 1.9rem;
-    height: 0.45rem;
-    margin-left: 3.2rem;
-    margin-top: 0.1rem;
-}
-.thirdFloor_five_two_one :nth-child(1){
-    display: block;
-    width: 0.28rem;
-    height: 0.13rem;
-    margin-top: 0.15rem; 
-    margin-left: 2.5rem;   
-}
-.thirdFloor_five_two_one :nth-child(2){
-    font-size:0.25rem ;
-    margin-left: 2.8rem;
-    margin-top: -0.25rem;
-    color:grey;  
-}
-.thirdFloor_five_two_one :nth-child(3){
-    display: block;
-    width: 0.28rem;
-    height: 0.13rem;
-    margin-top: -0.21rem;  
-    margin-left: 3.2rem;  
-}
-.thirdFloor_five_two_one :nth-child(4){
-    font-size:0.25rem ;
-    margin-left: 3.5rem;
-    margin-top: -0.25rem;
-    color:grey;  
-    opacity: 0.7; 
-} 
-.fourFloor_five_two{
-    width: 1.3rem;
-    height: 0.45rem;
-    margin-left: 2rem;
-    margin-top: 0.1rem;
-}
-.fourFloor_five_two :nth-child(1){
-    display: block;
-    width: 0.28rem;
-    height: 0.13rem;
-    margin-top: 0.15rem; 
-    /* margin-left: 0.1rem;    */
-}
-.fourFloor_five_two :nth-child(2){
-    font-size:0.25rem ;
-    margin-left: 0.4rem;
-    margin-top: -0.25rem;
-    color:grey;  
-}
-.fiveFloor{
-    width: 7.5rem;
-    height: 4.4rem;
-}
-.sixFloor{
-    height: 3.9rem;
-    width: 7.5rem;
-}
-.centerFloorBig{
-  width: 7.5rem;
-  height: 1rem;
-  background-color: #f3f3f3;
-display: flex;
-}
-.centerFloorBig_one{
-    width: 1.5rem;
-    text-align: center;
-    font-size: 0.25rem;
-    margin-left: 3.1rem;
-    margin-top: 0.25rem;
-    color: grey;
-}
-.centerFloorBig_two{
-    width: 0.7rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    background-color: #ff5c5c;
-    margin-left: 2.1rem;
-    margin-top: 0.1rem;
-
-}
-.centerFloorBig_two img{
-    width: 0.4rem;
-    height: 0.25rem;
-    display: block;
-    margin-top: 0.2rem;
-    margin-left: 0.15rem;
-}
-.endOne{
-    width: 7.5rem;
-    height: 1rem;
-    display: flex;
-    justify-content: space-around;
-}
-.endOneArt{
-    width: 0.65rem;
-    height: 0.9rem;
-}
-.endOneArt img{
-    width: 0.48rem;
-    height: 0.48rem;
-    display: block;
-    margin-left: 0.06rem;
-}
-.endOneArt p{
-    font-size: 0.25rem;
-    margin-top: 0.05rem;
-    color: grey;
-}
-.endOneArtSpcil{
-    width: 0.85rem;
-    height: 0.9rem;
-}
-.endOneArtSpcil img{
-    width: 0.48rem;
-    height: 0.48rem;
-    display: block;
-    margin-left: 0.16rem;
-}
-.endOneArtSpcil p{
-    font-size: 0.25rem;
-    margin-top: 0.05rem;
-    color: grey;
-}
+   #content_my{
+       width: 45rem;
+       font-size: 0;
+   }
+   #btns{
+       width: 7.5rem;
+       height: 0.3rem;
+       display: flex;
+       position: absolute;
+       margin-top: -0.5rem;
+       justify-content: center;
+   }
+   #btns div{
+       width: 0.18rem;
+       height: 0.18rem;
+       border-radius: 50%;
+       background-color: gray;
+       margin-right: 0.1rem;
+   }
 </style>
 <body>
     <!-- 头部 -->
@@ -537,8 +50,23 @@ display: flex;
             </div>
         </div>
         <!-- 轮播图 -->
-        <div class="center">
-             <img src="img/1-首页.png" alt="">
+        <div id="center">
+            <div id="content_my">
+                <img src="img/four.png" alt="">
+                <img src="img/first.png" alt="">
+                <img src="img/second.png" alt="">
+                <img src="img/third.png" alt="">
+                <img src="img/four.png" alt="">
+                <img src="img/first.png" alt="">
+            </div>
+        </div>
+        <div id="btns">
+          <div style="opacity: 0;"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div style="opacity: 0;"></div>
         </div>
         <!-- 分类 -->
         <div class="common">
@@ -776,5 +304,33 @@ display: flex;
             <p>我的</p>
          </article>
       </div>
+
+      <script>
+          var btns=document.getElementById("btns");
+          var btnss=btns.children;
+          var isc=new iScroll("center",{
+            //   开启元素捕捉
+              snap:true,
+            //   关闭惯性
+              momentum:false,
+            //隐藏水平滚动条
+            hScrollbar:false,
+            snapThreshold: 50,
+            // 滚动结束回调
+            onScrollEnd:function(){
+                btnss[this.currPageX].style.backgroundColor = "white"
+                if(this.currPageX==5){
+                    this.scrollToPage(1,0,0);
+                }
+                if(this.currPageX==0){
+                    this.scrollToPage(4,0,0);
+                }
+            } ,
+            onScrollStart: function () {
+            btnss[this.currPageX].style.backgroundColor = ""
+        }
+          })
+          isc.scrollToPage(1,0,0);
+      </script>
 </body>
 </html>
