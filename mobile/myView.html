@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
     <script src="js/iscroll.Veb.js"></script>
+    <script src="js/zepto.js"></script>
     <link rel="stylesheet" href="css/myView.css">
 </head>
 <style>
-   #content_my{
-       width: 45rem;
-       font-size: 0;
-   }
-   #btns{
-       width: 7.5rem;
-       height: 0.3rem;
-       display: flex;
-       position: absolute;
-       margin-top: -0.5rem;
-       justify-content: center;
-   }
-   #btns div{
-       width: 0.18rem;
-       height: 0.18rem;
-       border-radius: 50%;
-       background-color: gray;
-       margin-right: 0.1rem;
-   }
-   #scroll{
-        flex: 1; 
+    #content_my {
+        width: 45rem;
+        font-size: 0;
+    }
+
+    #btns {
+        width: 7.5rem;
+        height: 0.3rem;
+        display: flex;
+        position: absolute;
+        margin-top: -0.5rem;
+        justify-content: center;
+    }
+
+    #btns div {
+        width: 0.18rem;
+        height: 0.18rem;
+        border-radius: 50%;
+        background-color: gray;
+        margin-right: 0.1rem;
+    }
+
+    main{
+        /* flex: 1; */
         width: 100%;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
+        /* overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; */
         height: auto;
-   }
+        top:0;
+    }
+    .myRefresh{
+        width: 100%;
+        line-height: 40px;
+        font-size: 0.27rem;
+        text-align: center;
+        color: gray;
+    }
 </style>
+
 <body>
-    <div id="scroll">
+
     <!-- 头部 -->
-        <div class="nav">
-            <div class="navLeft">
-                 <p>郑州<img src="img/倒三角.png" alt=""></p>
+    <div class="nav">
+        <div class="navLeft">
+            <p>郑州<img src="img/倒三角.png" alt=""></p>
+        </div>
+        <div class="navCenter">
+            <div class="navCenter_one">
+                <div class="navCone"></div>
+                <div class="navCTwo">
+                    <img src="img/fdj.png" alt="">
+                    <p>搜索套餐、商家、话题</p>
+                </div>
+                <div class="navCThree"></div>
             </div>
-            <div class="navCenter">
-               <div class="navCenter_one">
-                  <div class="navCone"></div>
-                  <div class="navCTwo">
-                      <img src="img/fdj.png" alt="">
-                      <p>搜索套餐、商家、话题</p>
-                  </div>
-                  <div class="navCThree"></div>
-               </div>
-            </div>
-            <div class="navRight">
-                <img src="img/huihua.png" alt="">
-                <img src="img/gwc.png" alt="">
-            </div>
+        </div>
+        <div class="navRight">
+            <img src="img/huihua.png" alt="">
+            <img src="img/gwc.png" alt="">
+        </div>
+    </div>
+
+    <main id="content">
+        <!-- 下拉刷新 -->
+       <div class="myRefresh"> 
+             下拉刷新
         </div>
         <!-- 轮播图 -->
         <div id="center">
@@ -69,12 +89,12 @@
             </div>
         </div>
         <div id="btns">
-          <div style="opacity: 0;"></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div style="opacity: 0;"></div>
+            <div style="opacity: 0;"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div style="opacity: 0;"></div>
         </div>
         <!-- 分类 -->
         <div class="common">
@@ -94,253 +114,262 @@
                 <img src="img/画板 4.png" alt="">
                 <p>结婚任务</p>
             </article>
-        </div>       
-        <div class="centerFloor"></div>  
- <!-- 婚品采购 -->
-       <div class="firstFloor">  
-        <div class="firstFloor_one">
-             <div class="firstFloor_one_one">
-                 <h4>婚品采购</h4>
-                 <p>婚纱礼服&emsp13;喜糖&emsp13;请帖</p>
-             </div>
-             <div class="firstFloor_one_two" >
-                 <img src="img/hunqing.png" alt="">
-             </div>
         </div>
-        <div class="firstFloor_two">
-            <div class="firstFloor_two_one">
-                <div class="firstFloor_two_one_one">
-                     <img src="img/car.png" alt="">
-                </div>
+        <div class="centerFloor"></div>
+        <!-- 婚品采购 -->
+        <div class="firstFloor">
+            <div class="firstFloor_one">
                 <div class="firstFloor_one_one">
-                    <h4>婚车租赁</h4>
-                    <p>全程最低&emsp13;买贵退钱</p>
+                    <h4>婚品采购</h4>
+                    <p>婚纱礼服&emsp13;喜糖&emsp13;请帖</p>
+                </div>
+                <div class="firstFloor_one_two">
+                    <img src="img/hunqing.png" alt="">
                 </div>
             </div>
-            <div class="firstFloor_two_one">
-                <div class="firstFloor_two_one_two">
-                    <img src="img/hai.png" alt="">
-               </div>
-               <div class="firstFloor_one_one_three">
-                   <h4>全球旅拍</h4>
-                   <p>机票+酒店+拍摄</p>
-               </div>
+            <div class="firstFloor_two">
+                <div class="firstFloor_two_one">
+                    <div class="firstFloor_two_one_one">
+                        <img src="img/car.png" alt="">
+                    </div>
+                    <div class="firstFloor_one_one">
+                        <h4>婚车租赁</h4>
+                        <p>全程最低&emsp13;买贵退钱</p>
+                    </div>
+                </div>
+                <div class="firstFloor_two_one">
+                    <div class="firstFloor_two_one_two">
+                        <img src="img/hai.png" alt="">
+                    </div>
+                    <div class="firstFloor_one_one_three">
+                        <h4>全球旅拍</h4>
+                        <p>机票+酒店+拍摄</p>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-      <div class="centerFloor"></div>  
-      <!-- 海景拍摄 -->
-      <div class="secondFloor">
+        <div class="centerFloor"></div>
+        <!-- 海景拍摄 -->
+        <div class="secondFloor">
             <img src="img/haijing.png" alt="">
-      </div>
-      <div class="centerFloor"></div> 
-      <!-- 摄影工作室 -->
-      <div class="thirdFloor">
-          <div class="thirdFloor_one">
-             <div class="thirdFloor_one_one">
-                    <img src="img/head.png" alt=""> 
-                    <p>爱燕子摄影婚纱工作室</p> 
+        </div>
+        <div class="centerFloor"></div>
+        <!-- 摄影工作室 -->
+        <div class="thirdFloor">
+            <div class="thirdFloor_one">
+                <div class="thirdFloor_one_one">
+                    <img src="img/head.png" alt="">
+                    <p>爱燕子摄影婚纱工作室</p>
                     <div>婚纱摄影</div>
-             </div>
-             <div class="thirdFloor_one_two">
-                 <p class="thirdFloor_one_p1">+</p> <p class="thirdFloor_one_p2">关注</p>
-             </div>
-          </div>
-          <p class="thirdFloor_two">唯美浪漫婚纱照6套服装造型&emsp13;内景+外景多场景</p>
-          <div class="thirdFloor_three">
-            <img src="img/未标.png" alt="" >
-          </div>
-          <div class="thirdFloor_four">
-               <div class="thirdFloor_four_one">
+                </div>
+                <div class="thirdFloor_one_two">
+                    <p class="thirdFloor_one_p1">+</p>
+                    <p class="thirdFloor_one_p2">关注</p>
+                </div>
+            </div>
+            <p class="thirdFloor_two">唯美浪漫婚纱照6套服装造型&emsp13;内景+外景多场景</p>
+            <div class="thirdFloor_three">
+                <img src="img/未标.png" alt="">
+            </div>
+            <div class="thirdFloor_four">
+                <div class="thirdFloor_four_one">
                     <img src="img/钱(1).png" alt="">
                     <p>3988</p>
                     <p>8888</p>
-               </div>
-               <div class="thirdFloor_four_two">
-                  <p>立即抢</p>
-               </div>
-          </div>
-          <hr>
-          <div class="thirdFloor_five">
-             <div class="thirdFloor_five_one">
-                <img src="img/small.png" alt="">
-                <p>小清新婚纱照&emsp;跟拍</p>
-             </div>
-             <div class="fourFloor_five_two">
-               <img src="img/yan.png" alt="">
-               <p>2073</p>
-             </div>
-          </div>
+                </div>
+                <div class="thirdFloor_four_two">
+                    <p>立即抢</p>
+                </div>
+            </div>
+            <hr>
+            <div class="thirdFloor_five">
+                <div class="thirdFloor_five_one">
+                    <img src="img/small.png" alt="">
+                    <p>小清新婚纱照&emsp;跟拍</p>
+                </div>
+                <div class="fourFloor_five_two">
+                    <img src="img/yan.png" alt="">
+                    <p>2073</p>
+                </div>
+            </div>
 
-      </div>
-      <div class="centerFloor"></div>
-      <!-- 婚纱摄影 -->
-      <div class="fourFloor">
-        <div class="thirdFloor_one">
-            <div class="thirdFloor_one_one">
-                   <img src="img/secondHead.png" alt=""> 
-                   <p>郑州丽致龙婚纱摄影</p> 
-                   <div>婚纱摄影</div>
-            </div>
-            <div class="thirdFloor_one_two">
-                <p class="thirdFloor_one_p1">+</p> <p class="thirdFloor_one_p2">关注</p>
-            </div>
-         </div>
-         <p class="thirdFloor_two">最新客片，美懵了</p>
-         <div class="fourFloor_one">
-             <div class="fourFloor_one_one">
-                   <img src="img/婚1.png" alt="">
-             </div>
-             <div class="fourFloor_one_one">
-                <img src="img/婚2.png" alt="">
-             </div>
-         </div>
-         <div class="fourFloor_one">
-            <div class="fourFloor_one_one">
-                  <img src="img/婚3.png" alt="">
-            </div>
-            <div class="fourFloor_one_one">
-               <img src="img/婚4.png" alt="">
-            </div>
         </div>
+        <div class="centerFloor"></div>
+        <!-- 婚纱摄影 -->
+        <div class="fourFloor">
+            <div class="thirdFloor_one">
+                <div class="thirdFloor_one_one">
+                    <img src="img/secondHead.png" alt="">
+                    <p>郑州丽致龙婚纱摄影</p>
+                    <div>婚纱摄影</div>
+                </div>
+                <div class="thirdFloor_one_two">
+                    <p class="thirdFloor_one_p1">+</p>
+                    <p class="thirdFloor_one_p2">关注</p>
+                </div>
+            </div>
+            <p class="thirdFloor_two">最新客片，美懵了</p>
+            <div class="fourFloor_one">
+                <div class="fourFloor_one_one">
+                    <img src="img/婚1.png" alt="">
+                </div>
+                <div class="fourFloor_one_one">
+                    <img src="img/婚2.png" alt="">
+                </div>
+            </div>
+            <div class="fourFloor_one">
+                <div class="fourFloor_one_one">
+                    <img src="img/婚3.png" alt="">
+                </div>
+                <div class="fourFloor_one_one">
+                    <img src="img/婚4.png" alt="">
+                </div>
+            </div>
             <div class="thirdFloor_five_two_one">
                 <img src="img/another.png" alt="">
                 <p>20</p>
                 <img src="img/yan.png" alt="">
                 <p>2073</p>
-              </div>
-      </div>
-      <div class="centerFloor"></div>
-      <!-- 小井定制 -->
-      <div class="fiveFloor">
-        <div class="thirdFloor_one">
-            <div class="thirdFloor_one_one">
-                   <img src="img/xiaojing.png" alt=""> 
-                   <p>小井定制</p> 
-                   <div>婚纱摄影</div>
-            </div>
-            <div class="thirdFloor_one_two">
-                <p class="thirdFloor_one_p1">+</p> <p class="thirdFloor_one_p2">关注</p>
-            </div>
-         </div>
-         <p class="thirdFloor_two">“午后花园”奢华森系婚礼</p>
-         <div class="thirdFloor_three">
-            <img src="img/未标题-2.png" alt="" >
-          </div>
-          <div class="thirdFloor_four">
-            <div class="thirdFloor_four_one">
-                 <img src="img/钱(1).png" alt="">
-                 <p>18800</p>
-                 <p>28800</p>
-            </div>
-            <div class="thirdFloor_four_two">
-               <p>立即抢</p>
-            </div>
-       </div>
-       <div class="thirdFloor_five">
-        <div class="thirdFloor_five_one">
-           <img src="img/small.png" alt="">
-           <p>森林婚系&emsp13;婚礼花艺&emsp13;自然清新</p>
-        </div>
-        <div class="fourFloor_five_two">
-          <img src="img/yan.png" alt="">
-          <p>1649</p>
-        </div>
-     </div>
-      </div>
-      <div class="centerFloor"></div>
-      <!-- end -->
-      <div class="sixFloor">
-        <div class="thirdFloor_one">
-            <div class="thirdFloor_one_one">
-                   <img src="img/head.png" alt=""> 
-                   <p>郑州丽致龙婚纱摄影</p> 
-                   <div>婚纱摄影</div>
-            </div>
-            <div class="thirdFloor_one_two">
-                <p class="thirdFloor_one_p1">+</p> <p class="thirdFloor_one_p2">关注</p>
-            </div>
-         </div>
-         <p class="thirdFloor_two">专属的味道 韩式小清新浪漫内景婚纱照</p>
-         <div class="fourFloor_one">
-            <div class="fourFloor_one_one">
-                  <img src="img/底2 .png" alt="">
-            </div>
-            <div class="fourFloor_one_one">
-               <img src="img/底1.png" alt="">
             </div>
         </div>
-        <div class="thirdFloor_five">
-            <div class="thirdFloor_five_one">
-               <img src="img/small.png" alt="">
-               <p>小清新婚纱照&emsp13;内景</p>
+        <div class="centerFloor"></div>
+        <!-- 小井定制 -->
+        <div class="fiveFloor">
+            <div class="thirdFloor_one">
+                <div class="thirdFloor_one_one">
+                    <img src="img/xiaojing.png" alt="">
+                    <p>小井定制</p>
+                    <div>婚纱摄影</div>
+                </div>
+                <div class="thirdFloor_one_two">
+                    <p class="thirdFloor_one_p1">+</p>
+                    <p class="thirdFloor_one_p2">关注</p>
+                </div>
             </div>
-            <div class="fourFloor_five_two">
-              <img src="img/yan.png" alt="">
-              <p>6666</p>
+            <p class="thirdFloor_two">“午后花园”奢华森系婚礼</p>
+            <div class="thirdFloor_three">
+                <img src="img/未标题-2.png" alt="">
             </div>
-         </div>
-      </div>
-      <div class="centerFloorBig">
-          <div class="centerFloorBig_one">
-            正在加载...
-          </div>
-          <div class="centerFloorBig_two">
-             <img src="img/向上箭头.png" alt="">
-          </div>
-      </div>
-      <!-- 底部导航栏 -->
-      <div class="endOne">
+            <div class="thirdFloor_four">
+                <div class="thirdFloor_four_one">
+                    <img src="img/钱(1).png" alt="">
+                    <p>18800</p>
+                    <p>28800</p>
+                </div>
+                <div class="thirdFloor_four_two">
+                    <p>立即抢</p>
+                </div>
+            </div>
+            <div class="thirdFloor_five">
+                <div class="thirdFloor_five_one">
+                    <img src="img/small.png" alt="">
+                    <p>森林婚系&emsp13;婚礼花艺&emsp13;自然清新</p>
+                </div>
+                <div class="fourFloor_five_two">
+                    <img src="img/yan.png" alt="">
+                    <p>1649</p>
+                </div>
+            </div>
+        </div>
+        <div class="centerFloor"></div>
+        <!-- end -->
+        <div class="sixFloor">
+            <div class="thirdFloor_one">
+                <div class="thirdFloor_one_one">
+                    <img src="img/head.png" alt="">
+                    <p>郑州丽致龙婚纱摄影</p>
+                    <div>婚纱摄影</div>
+                </div>
+                <div class="thirdFloor_one_two">
+                    <p class="thirdFloor_one_p1">+</p>
+                    <p class="thirdFloor_one_p2">关注</p>
+                </div>
+            </div>
+            <p class="thirdFloor_two">专属的味道 韩式小清新浪漫内景婚纱照</p>
+            <div class="fourFloor_one">
+                <div class="fourFloor_one_one">
+                    <img src="img/底2 .png" alt="">
+                </div>
+                <div class="fourFloor_one_one">
+                    <img src="img/底1.png" alt="">
+                </div>
+            </div>
+            <div class="thirdFloor_five">
+                <div class="thirdFloor_five_one">
+                    <img src="img/small.png" alt="">
+                    <p>小清新婚纱照&emsp13;内景</p>
+                </div>
+                <div class="fourFloor_five_two">
+                    <img src="img/yan.png" alt="">
+                    <p>6666</p>
+                </div>
+            </div>
+        </div>
+        <div class="centerFloorBig">
+            <div class="centerFloorBig_one">
+                正在加载...
+            </div>
+            <div class="centerFloorBig_two">
+                <img src="img/向上箭头.png" alt="">
+            </div>
+        </div>
+        <!-- 底部导航栏 -->
+    </main>
+    <div class="endOne">
         <article class="endOneArt">
-           <img src="img/标签555.png" alt="">
-           <p>首页</p>
+            <img src="img/标签555.png" alt="">
+            <p>首页</p>
         </article>
         <article class="endOneArt">
             <img src="img/标签444.png" alt="">
             <p>分类</p>
-         </article>
-         <article class="endOneArtSpcil">
+        </article>
+        <article class="endOneArtSpcil">
             <img src="img/标签333.png" alt="">
             <p>新娘说</p>
-         </article>
-         <article class="endOneArt">
+        </article>
+        <article class="endOneArt">
             <img src="img/标签222.png" alt="">
             <p>工具</p>
-         </article>
-         <article class="endOneArt">
+        </article>
+        <article class="endOneArt">
             <img src="img/标签111.png" alt="">
             <p>我的</p>
-         </article>
-      </div>
+        </article>
     </div>
 
-
-      <script>
-          var btns=document.getElementById("btns");
-          var btnss=btns.children;
-          var isc=new iScroll("center",{
+    <script>
+        var btns = document.getElementById("btns");
+        var btnss = btns.children;
+        var isc = new iScroll("center", {
             //   开启元素捕捉
-              snap:true,
+            snap: true,
             //   关闭惯性
-              momentum:false,
+            momentum: false,
             //隐藏水平滚动条
-            hScrollbar:false,
+            hScrollbar: false,
             snapThreshold: 50,
             // 滚动结束回调
-            onScrollEnd:function(){
+            onScrollEnd: function () {
                 btnss[this.currPageX].style.backgroundColor = "white"
-                if(this.currPageX==5){
-                    this.scrollToPage(1,0,0);
+                if (this.currPageX == 5) {
+                    this.scrollToPage(1, 0, 0);
                 }
-                if(this.currPageX==0){
-                    this.scrollToPage(4,0,0);
+                if (this.currPageX == 0) {
+                    this.scrollToPage(4, 0, 0);
                 }
-            } ,
+            },
             onScrollStart: function () {
-            btnss[this.currPageX].style.backgroundColor = ""
-        }
-          })
-          isc.scrollToPage(1,0,0);
-      </script>
+                btnss[this.currPageX].style.backgroundColor = ""
+            }
+        })
+        isc.scrollToPage(1, 0, 0);
+
+        var isc_xiala=new iScroll("content",{
+            topOffset:40,
+        y:-40,
+        })
+    </script>
 </body>
+
 </html>

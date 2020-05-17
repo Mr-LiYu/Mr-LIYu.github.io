@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌手详细介绍</title>
+    <script src="js/zepto.js"></script>
+    <script src="js/query.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url(imgs/abc.png);
+    }
+
+    /* 草稿设计图为450 */
+    html {
+        font-size: 22.222vw;
+    }
+
+    #box p {
+        font-size: 0.2rem;
+        color: blanchedalmond;
+        z-index: 1;
+        font-family: fantasy;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <p></p>
+    </div>
+    <script>
+        var query = getQuery();
+        $.get("http://vebcoder.cn:9090/artist/artist", {
+            artistid: query.artistid
+        }, function (res) {
+            var data = res.data.info;
+            var html = "";
+            html = "<div id='box'><p>" + data + "</p></div>"
+            $("#box").html(html);
+        })
+    </script>
+</body>
+
+</html>

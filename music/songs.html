@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌曲列表</title>
+    <script src="js/query.js"></script>
+    <script src="js/zepto.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 22.222vw;
+    }
+    li {
+        list-style: none;
+    }
+
+    #loding {
+        background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589544256422&di=1b8901886ebdcc154112637d8ebb8e30&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170721%2F3944ff193f604af382ffac521de30ca4_th.jpg), center, center;
+        background-color: #eeeeee;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: 0.8;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        top: 0;
+        position: fixed;
+        display: none;
+    }
+
+    .myList {
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 0.5rem;
+        top: 0.5rem;
+        position: absolute;
+    }
+
+    .myList li {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    li {
+        width: 95%;
+        margin: 25px 20px 10px 0;
+        box-shadow: 0 0 5px #999;
+        padding: 10px;
+        background-image: linear-gradient(#8fc1ca,#00d0ff6b);
+        border-radius: 20px;
+    }
+
+    .myList img {
+        width: 0.8rem;
+        border-radius: 50%;
+        transition: all .5s;
+        margin-left: 0.35rem;
+    }
+
+    button {
+        width: 70px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: burlywood;
+    }
+
+    audio {
+        position: fixed;
+        left: 0;
+        bottom: 0.01rem;
+        height: 80px;
+        width: 100%;
+        outline: 0;
+        transition: all .5s;
+    }
+
+    .myList>li h4,
+    p {
+        width: 0.8rem;
+        text-align: center;
+        color: black;
+        font-size: 0.15rem;
+        overflow: hidden;
+         white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    header {
+        width: 100%;
+        line-height: 0.6rem;
+        top: 0;
+        left: 0;
+        background-color: black;
+        color: blanchedalmond;
+        font-size: 0.25rem;
+        position: absolute;
+        text-align: center;
+    }
+    video{
+        display: none;
+    }
+</style>
+
+<body>
+    <header>
+        歌曲列表
+    </header>
+    <ul class="myList">
+        <!-- <li>
+            <img src="http://img1.kuwo.cn/star/starheads/300/10/6/294045140.jpg" alt="">
+            <div class="info">
+                <h4>告白气球</h4>
+                <p>周杰伦</p>
+            </div>
+            <div class="btn">
+                <button class="song">播放单曲</button>
+                <button>播放MV</button>
+            </div>
+        </li> -->
+    </ul>
+    <div id="loding"></div>
+    <audio src="" autoplay controls></audio>
+    <video src="" controls></video>
+</body>
+<script>
+    var query = getQuery();
+
+$("#loding").show();
+$.get("http://vebcoder.cn:9090/artist/artistMusic", {
+    artistid: query.artistid,
+    rn: 100,
+    pn: 1
+}, function (res) {
+    $("#loding").hide();
+    var html = "";
+    var list = res.data.list;
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].hasmv == 1) {
+            html += ' <li><img src="' + list[i].pic + '" alt=""><div class="info"><h4>' + list[i].name +
+                '</h4><p>' + list[i].artist +'</p></div><div class="btn"><button class="song" song-id="' + list[i].rid +
+                '">播放单曲</button><button class="mv" song-id="' + list[i].rid + '">播放MV</button></div></li>';
+        } else {
+            html += ' <li><img src="' + list[i].pic + '" alt=""><div class="info"><h4>' + list[i].name +
+                '</h4><p>' + list[i].artist +'</p></div><div class="btn"><button class="song" song-id="' + list[i].rid +
+                '">播放单曲</button></div></li>';
+        }
+    }
+    $(".myList").html(html);
+})
+
+// 点击播放单曲按钮  获取歌手id 发送请求 获取音乐播放路径
+$(".song").live("click", function () {
+    var rid = $(this).attr("song-id");
+    $.get("http://vebcoder.cn:9090/url?format=mp3&rid=" + rid +
+        "&response=url&type=convert_url3&br=128kmp3&from=web",
+        function (res) {
+            var url = JSON.parse(res).url
+            $("audio").attr("src", url).css({
+                bottom: 0
+            })
+            // $("audio").get(0).play();       
+        })
+})
+
+$(".mv").live("click", function () {
+    var rid = $(this).attr("song-id");
+    $.get("http://vebcoder.cn:9090/url?rid="+rid+"&response=url&format=mp4%7Cmkv&type=convert_url",function(res){
+        // console.log(res);
+    window.open(res)
+    }) 
+})
+
+</script>
+<!-- <script src="js/songs.js"></script> -->
+
+</html>

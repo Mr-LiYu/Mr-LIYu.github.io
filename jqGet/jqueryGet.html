@@ -57,13 +57,15 @@
             success: function (msg) {
                 $("#singerList").html(msg);
                var list=msg.data.artistList;
-               console.log(list);
+            //    console.log(list);
                for(var i=0;i<list.length;i++){
                     var li = document.createElement("li");
                     var img = document.createElement("img");
                     img.src=list[i].pic;
                     var h4 = document.createElement("h4");
                     h4.innerHTML=list[i].name;
+                    console.log( h4.innerHTML);
+                    
                     li.appendChild(img);
                     li.appendChild(h4);
                     singerList.appendChild(li);
